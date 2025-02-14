@@ -8,6 +8,16 @@ public partial class Editor : ContentPage
     {
         InitializeComponent();
         editor.Text = File.Exists(_fileName) ? File.ReadAllText(_fileName) : string.Empty;
+
+        //Desde code
+        //if (DeviceInfo.Platform == DevicePlatform.iOS)
+        //{
+        //    MyStackLayout.Background = Colors.Blue;
+        //}
+        //else
+        //{
+        //    MyStackLayout.Background = Colors.Aqua;
+        //}
     }
 
     private void Button_Clicked_Save(object sender, EventArgs e)

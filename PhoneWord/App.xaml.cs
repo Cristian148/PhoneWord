@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            MainPage = new Editor(); //new AppShell();
+            MainPage = new Grid(); ///new AppShell();//new Editor();
         }
     }
 }
