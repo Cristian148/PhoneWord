@@ -63,6 +63,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="CalculatorGrid.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Editor.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

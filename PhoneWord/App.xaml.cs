@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            MainPage = new Grid(); ///new AppShell();//new Editor();
+            MainPage = new CalculatorGrid();//new Grid(); ///new AppShell();//new Editor();
         }
     }
 }
