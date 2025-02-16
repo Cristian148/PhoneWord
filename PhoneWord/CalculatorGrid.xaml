@@ -3,18 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PhoneWord.CalculatorGrid"
              Title="CalculatorGrid">
-    <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto,Auto,*,Auto,Auto,Auto" Padding="20">
-        <Label Text="Bill" Grid.Column="0" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" />
-        <Entry x:Name="billInput"  Grid.Column="1" Grid.Row="0" Placeholder="Ingrese monto" Keyboard="Numeric" />
+    <ContentPage.Resources>
+        <Color x:Key="MainColor">#2196F3</Color>
+        <Color x:Key="BackGroundColor">blue</Color>
+        <Color x:Key="LabelTextColor">black</Color>
+    </ContentPage.Resources>
 
-        <Label Text="Tip"  Grid.Column="0" Grid.Row="1" />
-        <Label x:Name="TipOutput"  Grid.Column="1" Grid.Row="1" Text="0.00" />
+    <Grid ColumnDefinitions="*,*" Background="{StaticResource BackGroundColor }" RowDefinitions="Auto,Auto,Auto,*,Auto,Auto,Auto" Padding="20">
+        <Grid.Resources>
+            <x:Double x:Key="sizeGrid">25</x:Double>
+        </Grid.Resources>
 
-        <Label Text="Total"  Grid.Column="0" Grid.Row="2" />
-        <Label x:Name="TotalOutput" Grid.Column="1" Grid.Row="2" Text="0.00" />
+        <Label TextColor="{StaticResource LabelTextColor }"
+               Text="Bill" Grid.Column="0" Grid.Row="0"
+               VerticalOptions="Center"
+               HorizontalOptions="Center" />
 
-        <Label Text="Tip Perception" VerticalOptions="End" Grid.Column="0" Grid.Row="3" />
-        <Label x:Name="tipPerception" VerticalOptions="End" HorizontalOptions="End" Text="15%"  Grid.Column="1" Grid.Row="3" />
+        <Entry FontSize="{StaticResource sizeGrid}" x:Name="billInput"  TextColor="{StaticResource MainColor }" Grid.Column="1" Grid.Row="0" Placeholder="Ingrese monto" Keyboard="Numeric" />
+
+        <Label TextColor="{StaticResource LabelTextColor }" Text="Tip"  Grid.Column="0" Grid.Row="1" />
+        <Label TextColor="{StaticResource LabelTextColor }" x:Name="TipOutput"  Grid.Column="1" Grid.Row="1" Text="0.00" />
+
+        <Label TextColor="{StaticResource LabelTextColor }" Text="Total"  Grid.Column="0" Grid.Row="2" />
+        <Label TextColor="{StaticResource LabelTextColor }" x:Name="TotalOutput" Grid.Column="1" Grid.Row="2" Text="0.00" />
+
+        <Label TextColor="{StaticResource LabelTextColor }" Text="Tip Perception" VerticalOptions="End" Grid.Column="0" Grid.Row="3" />
+        <Label TextColor="{StaticResource LabelTextColor }" x:Name="tipPerception" VerticalOptions="End" HorizontalOptions="End" Text="15%"  Grid.Column="1" Grid.Row="3" />
 
         <Slider x:Name="tipPerceptionSlider" Grid.Row="4" Grid.ColumnSpan="2" Minimum="0" Maximum="100" Value="15" />
 

@@ -4,6 +4,13 @@
              xmlns:notes="clr-namespace:PhoneWord"
              x:Class="PhoneWord.Editor"
              Title="Editor">
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="BackgroundColor" Value="Orange"></Setter>
+            <Setter Property="TextColor" Value="White"></Setter>
+            <Setter Property="FontSize" Value="35"></Setter>
+        </Style>
+    </ContentPage.Resources>
     <VerticalStackLayout
         x:Name="MyStackLayout"
         Margin="30,60,30,30"
@@ -25,5 +32,6 @@
             <Button Grid.Column="0" Text="Guardar" WidthRequest="100" Clicked="Button_Clicked_Save" TextColor="{x:Static Member=notes:ShareResources.BackGroundColor}"></Button>
             <Button Grid.Column="2" Text="Ellimnar" WidthRequest="100" Clicked="Button_Clicked_Delete" TextColor="{x:Static Member=notes:ShareResources.BackGroundColor}"></Button>
         </Grid>
+        <Label Text="ACa cambio el color desde toda la aplicación" TextColor="{StaticResource myColorOne}" ></Label>
     </VerticalStackLayout>
 </ContentPage>
